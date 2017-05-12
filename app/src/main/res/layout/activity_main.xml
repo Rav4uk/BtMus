@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.eugenean.btmus_v4.MainActivity">
+
+    <Button
+        android:id="@+id/button_show_devices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show devices"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="40dp"
+        android:layout_below="@+id/button_connect"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/button_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:layout_below="@+id/da"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/button_disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disconnect"
+        android:layout_alignBaseline="@+id/button_connect"
+        android:layout_alignBottom="@+id/button_connect"
+        android:layout_toEndOf="@+id/button_connect" />
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/dn"
+        android:text="name"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/devices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button_show_devices"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/device_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/da"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/device_name"
+        android:layout_toEndOf="@+id/da"
+        android:text="address"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dn"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Device name:"
+        android:textAlignment="textEnd"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/da"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dn"
+        android:text="Device address:"
+        android:textAlignment="textEnd"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/device_address"
+        android:layout_toEndOf="@+id/button_disconnect"
+        android:text="Status:" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_disconnect"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/stat"
+        android:layout_toEndOf="@+id/button_disconnect"
+        android:text="null" />
+
+</RelativeLayout>
